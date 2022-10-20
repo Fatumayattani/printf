@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
 		for (; format[i] != '%' && format[i]; i++)
 		{
 			_putchar(format[i]);
-			count++;
+			c++;
 		}
 		if (!format[i])
 			return (c);
@@ -77,5 +77,5 @@ int _printf(const char *format, ...)
 			i++;
 	}
 	va_end(valist);
-	return (count);
+	return (c);
 }
